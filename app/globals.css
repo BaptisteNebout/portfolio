@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 @import "tw-animate-css";
 
+
 @layer base {
   :root {
     --background: 210 12% 16%;
