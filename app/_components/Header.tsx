@@ -4,19 +4,23 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Section } from "./Section";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
+import { GmailIcon } from "./icons/GmailIcon";
 
 export const Header = () => {
     return (
-        <header className="sticky top-0 py-4">
+        <header className="top-0 py-4">
             <Section className="flex items-baseline">
                 <h1 className="text-lg font-bold text-primary">baptiste-nebout.fr</h1>
                 <div className="flex-1"/>
                 <ul className="flex items-center gap-2">
-                    <Link href="https://github.com/baptistenebout" className={cn(buttonVariants({ variant: "outline", size: "icon" }), " size-6 p-0 rounded-[5px] ")}>
+                    <Link href="https://github.com/baptistenebout" className={cn(buttonVariants({ variant: "outlineIcon", size: "icon" }), " h-6 w-6 p-0 rounded-[6px] ")}>
                         <GithubIcon size={12} className="text-foreground"/>
                     </Link>
-                    <Link href="https://www.linkedin.com/in/bnebout" className={cn(buttonVariants({ variant: "outline", size: "icon" }), " size-6 p-0 rounded-[5px] ")}>
+                    <Link href="https://www.linkedin.com/in/bnebout" className={cn(buttonVariants({ variant: "outlineIcon", size: "icon" }), " h-6 w-6 p-0 rounded-[6px] ")}>
                         <LinkedinIcon size={12} className="text-foreground"/>
+                    </Link>
+                    <Link href="mailto:baptiste16300@gmail.com" className={cn(buttonVariants({ variant: "outlineIcon", size: "icon" }), " h-6 w-6 p-0 rounded-[6px] ")}>
+                        <GmailIcon size={12} className="text-foreground"/>
                     </Link>
                 </ul>
             </Section>
