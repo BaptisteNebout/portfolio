@@ -7,12 +7,7 @@ import { JSIcon } from "./icons/JSIcon";
 import { TSIcon } from "./icons/TSIcon";
 import { SQLIcon } from "./icons/SQLIcon";
 import { MongoIcon } from "./icons/MongoIcon";
-
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
-    return (
-        <span className={cn("bg-accent/30 font-mono border border-accent hover:bg-accent/50 transition-colors px-1 py-0.5 text-primary rounded-xl", className)} {...props} />
-    );
-}
+import { Code } from "./Code";
 
 
 export const Hero = () => {
