@@ -8,7 +8,7 @@ import { Code } from "./Code";
 export const Skills = () => {
   return (
     <Section className="flex flex-col items-start gap-4">
-      <Badge className="rounded-[5px]" variant={"outline"}>Skills</Badge>
+      <Badge className="rounded-[5px]" variant={"outline"}>Compétences</Badge>
       <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">
         j'ai pu traviller sur...
       </h2>

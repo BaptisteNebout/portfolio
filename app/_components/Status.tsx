@@ -1,10 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import { Code, LucideIcon } from "lucide-react";
 import Link from "next/link";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { FirebaseIcon } from "./icons/FirebaseIcon";
-import { ComponentType, SVGProps } from "react";
+import { SideProject, SideProjectProps } from "./SideProjects";
+import { Etudes, EtudesProps } from "./Studies";
+import { Work, WorkProps } from "./Works";
 
 export const Status = () => {
   return (
@@ -20,7 +21,7 @@ export const Status = () => {
             </Card>
         </div>
         <div className="flex-[2] gap-4 flex flex-col w-full">
-            <Card className="p-4 flex-1 border-secondary">
+            <Card className="p-4 flex-1 flex-col border-secondary">
                 <p className="text-muted-foreground text-lg">Mes études</p>
                 <div className="flex flex-col gap-4">
                     {Studies.map((project, index) => (
@@ -28,7 +29,7 @@ export const Status = () => {
                     ))}
                 </div>
             </Card>
-            <Card className="p-4 flex-1 border-secondary">
+            <Card className="p-4 flex-1 flex-col border-secondary">
                 <p className="text-muted-foreground text-lg">Mes projets perso</p>
                 <div className="flex flex-col gap-4">
                     {SIDE_PROJECTS.map((project, index) => (
@@ -60,31 +61,6 @@ const Works: WorkProps[] = [
     }
 ]
 
-type WorkProps = {
-    image: string,
-    title: string,
-    role: string,
-    description: string,
-    date: string,
-    url: string
-};
-
-const Work = (props: WorkProps) => {
-    return (
-       <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
-            <img src={props.image} alt={props.title} className="w-20 h-20 object-contain rounded-md"/>
-            <div>                
-                <p className="text-lg font-semibold">{props.title}</p>
-                <p className="text-md font-bold text-muted-foreground">{props.role}</p>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
-            </div>
-            <div className="ml-auto">
-                <p className="text-sm text-muted-foreground">{props.date}</p>
-            </div>
-       </Link>
-    );
-};
-
 const Studies: EtudesProps[] = [
     {
         image: "https://www.info-jeunesse16.com/images/ImagesUpload/actus/3179-1696.jpg",
@@ -109,27 +85,6 @@ const Studies: EtudesProps[] = [
     }
 ]
 
-type EtudesProps = {
-    image: string,
-    title: string,
-    description: string,
-    date: string,
-    url: string
-};
-
-const Etudes = (props: EtudesProps) => {
-    return (
-       <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
-            <img src={props.image} alt={props.title} className="w-10 object-contain rounded-md"/>
-            <div className="mr-auto">                
-                <p className="text-base font-semibold">{props.title}</p>
-                <p className="text-xs text-muted-foreground">{props.description}</p>
-            </div>
-            <p className="text-xs text-end text-muted-foreground">{props.date}</p>
-       </Link>
-    );
-};
-
 const SIDE_PROJECTS: SideProjectProps[] = [
     {
         Logo: FirebaseIcon,
@@ -144,24 +99,3 @@ const SIDE_PROJECTS: SideProjectProps[] = [
         url: "https://github.com/BaptisteNebout/mhBot"
     }
 ]
-
-type SideProjectProps = {
-    Logo: ComponentType<SVGProps<SVGSVGElement>>,
-    title: string,
-    description: string,
-    url: string
-};
-
-const SideProject = (props: SideProjectProps) => {
-    return (
-       <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
-            <span className="bg-accent text-accent-foreground p-2 rounded-sm">
-                <props.Logo className="w-6 h-6" />
-            </span>
-            <div>                
-                <p className="text-lg font-semibold">{props.title}</p>
-                <p className="text-sm text-muted-foreground">{props.description}</p>
-            </div>
-       </Link>
-    );
-};

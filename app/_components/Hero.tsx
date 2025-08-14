@@ -1,6 +1,4 @@
-import { cn } from "@/lib/utils";
 import { Section } from "./Section";
-import { ComponentPropsWithoutRef } from "react";
 import { JavaIcon } from "./icons/JavaIcon";
 import { PHPIcon } from "./icons/PHPIcon";
 import { JSIcon } from "./icons/JSIcon";
