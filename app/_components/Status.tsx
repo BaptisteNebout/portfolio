@@ -1,17 +1,16 @@
 import { Card } from "@/components/ui/card";
 import { Section } from "./Section";
-import Link from "next/link";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { FirebaseIcon } from "./icons/FirebaseIcon";
 import { SideProject, SideProjectProps } from "./SideProjects";
 import { Etudes, EtudesProps } from "./Studies";
 import { Work, WorkProps } from "./Works";
+import { JavaIcon } from "./icons/JavaIcon";
 
 export const Status = () => {
   return (
-    <Section className="flex max-md:flex-col items-start gap-4">
-        <div className="flex-[3] w-full">
-            <Card className="p-4 flex-col gap-2 w-full border-secondary">
+    <Section className="grid grid-cols-3 gap-4 max-md:flex max-md:flex-col">
+            <Card className="col-span-2 p-4 flex-col gap-2 w-full border-secondary">
                 <p className="text-muted-foreground text-lg">Mes expériences professionnelles</p>
                 <div className="flex flex-col gap-4">
                     {Works.map((project, index) => (
@@ -19,17 +18,8 @@ export const Status = () => {
                     ))}
                 </div>
             </Card>
-        </div>
-        <div className="flex-[2] gap-4 flex flex-col w-full">
-            <Card className="p-4 flex-1 flex-col border-secondary">
-                <p className="text-muted-foreground text-lg">Mes études</p>
-                <div className="flex flex-col gap-4">
-                    {Studies.map((project, index) => (
-                        <Etudes key={index} {...project} />
-                    ))}
-                </div>
-            </Card>
-            <Card className="p-4 flex-1 flex-col border-secondary">
+
+            <Card className="col-span-1 p-4 flex-1 flex-col border-secondary">
                 <p className="text-muted-foreground text-lg">Mes projets perso</p>
                 <div className="flex flex-col gap-4">
                     {SIDE_PROJECTS.map((project, index) => (
@@ -37,7 +27,17 @@ export const Status = () => {
                     ))}
                 </div>
             </Card>
-        </div>
+
+            <Card className="col-span-3 p-4 flex-1 flex-col border-secondary">
+                <p className="text-muted-foreground text-lg">Mes études</p>
+                <div className="grid grid-cols-3 gap-4 max-md:grid-cols-1">
+                    {Studies.map((project, index) => (
+                        <div key={index} className="flex flex-col">
+                            <Etudes {...project} />
+                        </div>
+                    ))}
+                </div>
+            </Card>
     </Section>
   );
 };
@@ -65,7 +65,7 @@ const Studies: EtudesProps[] = [
     {
         image: "https://www.info-jeunesse16.com/images/ImagesUpload/actus/3179-1696.jpg",
         title: "BTS",
-        description: "services informatiques aux organisations, option B solutions logicielles et applications métiers",
+        description: "services informatiques aux organisations, option B SLAM",
         date: "2018-2021",
         url: "https://lycee-elie-vinet.fr/btssio"
     },
@@ -89,13 +89,19 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     {
         Logo: FirebaseIcon,
         title: "Firebase avec Angular",
-        description: "Réalisation d'une application simple surtout axée sur la mise en place de l'authentification et la gestion des utilisateurs via Firebase, afin d'être utiliser sur un projet futur.",
+        description: "Réalisation d'une application simple surtout axée sur la mise en place de l'authentification et la gestion des utilisateurs.",
         url: "https://github.com/BaptisteNebout/AngularFirebase"
     },
     {
         Logo: DiscordIcon,
         title: "Bot discord",
-        description: "Création d'un bot Discord pour la récupération d'information automatisé sur un site spécifique.",
+        description: "Création de bots Discord pour la récupération d'information automatisé sur un site spécifique et d'autres diverses commandes.",
         url: "https://github.com/BaptisteNebout/mhBot"
+    },
+    {
+        Logo: JavaIcon,
+        title: "Java SpringBoot",
+        description: "Création d'un back pour la récupération de données dans le but de créer un réseau social.",
+        url: "https://github.com/BaptisteNebout"
     }
 ]

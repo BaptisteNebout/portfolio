@@ -11,7 +11,7 @@ export type SideProjectProps = {
 export const SideProject = (props: SideProjectProps) => {
     return (
        <Link href={props.url} className="inline-flex items-center gap-4 hover:bg-accent/50 transition-colors p-1 rounded">
-            <span className="bg-accent text-accent-foreground p-2 rounded-sm">
+            <span className="bg-accent text-accent-foreground p-2 rounded-[5px]">
                 <props.Logo className="w-6 h-6" />
             </span>
             <div>                
