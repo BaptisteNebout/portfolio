@@ -41,7 +41,7 @@ export const Skills = () => {
             <div className="flex flex-col gap-2 flex-1">
               <JiraIcon size={42} />
               <h3 className="text-2xl font-semibold tracking-tight">Gestion de projet</h3>
-              <p className="text-muted-foreground text-sm">J&apos;ai établi des <u>plannings</u> et assuré la <u>budgétisation</u> à partir d'un cahier des charges lors de mes études. En entreprise, j&apos;ai collaboré en équipe grâce à des outils de planification et de suivi comme <Code>Jira</Code>, pour organiser efficacement les tâches et projets.</p>
+              <p className="text-muted-foreground text-sm">J&apos;ai établi des <u>plannings</u> et assuré la <u>budgétisation</u> à partir d&apos;un cahier des charges lors de mes études. En entreprise, j&apos;ai collaboré en équipe grâce à des outils de planification et de suivi comme <Code>Jira</Code>, pour organiser efficacement les tâches et projets.</p>
             </div>
         </div>
       </div>
