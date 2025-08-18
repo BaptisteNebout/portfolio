@@ -12,7 +12,7 @@ export const Skills = () => {
     <Section className="flex flex-col items-start gap-4">
       <Badge className="rounded-[5px]" variant={"outline"}>Compétences</Badge>
       <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-        J'ai pu travailler sur...
+        J&apos;ai pu travailler sur...
       </h2>
       <div className="grid gap-10">
         <div className="flex max-md:flex-col gap-4">
@@ -36,12 +36,12 @@ export const Skills = () => {
           <div className="flex flex-col gap-2 flex-1">
               <DockerIcon size={42} />
               <h3 className="text-2xl font-semibold tracking-tight">Déploiement</h3>
-              <p className="text-muted-foreground text-sm">J’ai mis en place des processus de CI/CD avec <Code>Jenkins</Code> et <Code>Docker</Code>, aussi bien en entreprise que dans le cadre de projets d’études, afin d’automatiser le déploiement et de fiabiliser les livraisons.</p>
+              <p className="text-muted-foreground text-sm">J&apos;ai mis en place des processus de CI/CD avec <Code>Jenkins</Code> et <Code>Docker</Code>, aussi bien en entreprise que dans le cadre de projets d&apos;études, afin d&apos;automatiser le déploiement et de fiabiliser les livraisons.</p>
             </div>
             <div className="flex flex-col gap-2 flex-1">
               <JiraIcon size={42} />
               <h3 className="text-2xl font-semibold tracking-tight">Gestion de projet</h3>
-              <p className="text-muted-foreground text-sm">J’ai établi des <u>plannings</u> et assuré la <u>budgétisation</u> à partir d'un cahier des charges lors de mes études. En entreprise, j’ai collaboré en équipe grâce à des outils de planification et de suivi comme <Code>Jira</Code>, pour organiser efficacement les tâches et projets.</p>
+              <p className="text-muted-foreground text-sm">J&apos;ai établi des <u>plannings</u> et assuré la <u>budgétisation</u> à partir d'un cahier des charges lors de mes études. En entreprise, j&apos;ai collaboré en équipe grâce à des outils de planification et de suivi comme <Code>Jira</Code>, pour organiser efficacement les tâches et projets.</p>
             </div>
         </div>
       </div>

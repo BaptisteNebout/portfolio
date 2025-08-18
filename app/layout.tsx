@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const AnekTelugu = Anek_Telugu({subsets: ["latin"], variable: "--font-caption"});
 
 export const metadata: Metadata = {
-  title: "Baptiste Nebout . Développeur Logiciel",
+  title: "Baptiste Nebout . Développeur Logiciel Fullstack",
   description: "Développeur logiciel passionné par la création d'applications, avec une expertise en Front-end et back-end.",
 };
 
