@@ -13,13 +13,13 @@ export const Header = () => {
                 <h1 className="text-lg font-bold text-primary">baptiste-nebout.fr</h1>
                 <div className="flex-1"/>
                 <ul className="flex items-center gap-2">
-                    <Link href="https://github.com/baptistenebout" className={cn(buttonVariants({ variant: "outlineIcon", size: "icon" }), " h-6 w-6 p-0 rounded-[6px] ")}>
+                    <Link href="https://github.com/baptistenebout" className={cn(buttonVariants({ variant: "outlineIcon", size: "icon" }), " h-6 w-6 p-0 rounded-[7px] ")}>
                         <GithubIcon size={12} className="text-foreground"/>
                     </Link>
-                    <Link href="https://www.linkedin.com/in/bnebout" className={cn(buttonVariants({ variant: "outlineIcon", size: "icon" }), " h-6 w-6 p-0 rounded-[6px] ")}>
+                    <Link href="https://www.linkedin.com/in/bnebout" className={cn(buttonVariants({ variant: "outlineIcon", size: "icon" }), " h-6 w-6 p-0 rounded-[7px] ")}>
                         <LinkedinIcon size={12} className="text-foreground"/>
                     </Link>
-                    <Link href="mailto:baptiste16300@gmail.com" className={cn(buttonVariants({ variant: "outlineIcon", size: "icon" }), " h-6 w-6 p-0 rounded-[6px] ")}>
+                    <Link href="mailto:baptiste16300@gmail.com" className={cn(buttonVariants({ variant: "outlineIcon", size: "icon" }), " h-6 w-6 p-0 rounded-[7px] ")}>
                         <GmailIcon size={12} className="text-foreground"/>
                     </Link>
                 </ul>

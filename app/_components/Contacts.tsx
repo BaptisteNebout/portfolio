@@ -11,7 +11,7 @@ export const Contacts = () => {
   return (
     <Section className="flex flex-col items-start gap-4">
         <Badge variant="outline">Me contacter</Badge>
-        <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">Je serais ravi d'échanger avec vous</h2>
+        <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">Je serais ravi d'échanger avec vous.</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
             <Contact 
                 name="Baptiste Nebout" 

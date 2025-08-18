@@ -65,7 +65,7 @@ const Studies: EtudesProps[] = [
     {
         image: "https://www.info-jeunesse16.com/images/ImagesUpload/actus/3179-1696.jpg",
         title: "BTS",
-        description: "services informatiques aux organisations, option B SLAM",
+        description: "Services informatiques aux organisations, option B SLAM",
         date: "2018-2021",
         url: "https://lycee-elie-vinet.fr/btssio"
     },
@@ -95,7 +95,7 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     {
         Logo: DiscordIcon,
         title: "Bot discord",
-        description: "Création de bots Discord pour la récupération d'information automatisé sur un site spécifique et d'autres diverses commandes.",
+        description: "Création de bots Discord pour la récupération d'information automatisée sur un site spécifique et d'autres diverses commandes.",
         url: "https://github.com/BaptisteNebout/mhBot"
     },
     {

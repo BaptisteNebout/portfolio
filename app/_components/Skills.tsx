@@ -12,7 +12,7 @@ export const Skills = () => {
     <Section className="flex flex-col items-start gap-4">
       <Badge className="rounded-[5px]" variant={"outline"}>Compétences</Badge>
       <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-        j'ai pu traviller sur...
+        J'ai pu travailler sur...
       </h2>
       <div className="grid gap-10">
         <div className="flex max-md:flex-col gap-4">
