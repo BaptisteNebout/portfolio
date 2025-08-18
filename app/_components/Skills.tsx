@@ -19,12 +19,12 @@ export const Skills = () => {
           <div className="flex flex-col gap-2 flex-1">
               <AngularLogo size={42} />
               <h3 className="text-2xl font-semibold tracking-tight">Front-end</h3>
-              <p className="text-muted-foreground text-sm">Création d’interfaces modernes et réactives avec <Code>Angular</Code>, <Code>Vue</Code> et <Code>SCSS</Code>, sur des projets personnels, académiques et professionnels.</p>
+              <p className="text-muted-foreground text-sm">Création d&apos;interfaces modernes et réactives avec <Code>Angular</Code>, <Code>Vue</Code> et <Code>SCSS</Code>, sur des projets personnels, académiques et professionnels.</p>
             </div>
             <div className="flex flex-col gap-2 flex-1">
               <JavaLogo size={42} />
               <h3 className="text-2xl font-semibold tracking-tight">Back-end</h3>
-              <p className="text-muted-foreground text-sm">Développement d’applications en <Code>Java</Code> avec <Code>Spring Boot</Code> et <Code>PHP</Code>, avec une approche orientée performance et évolutivité, et des connexions à des API tiers.</p>
+              <p className="text-muted-foreground text-sm">Développement d&apos;applications en <Code>Java</Code> avec <Code>Spring Boot</Code> et <Code>PHP</Code>, avec une approche orientée performance et évolutivité, et des connexions à des API tiers.</p>
             </div>
             <div className="flex flex-col gap-2 flex-1">
               <SQLLogo size={42} />
