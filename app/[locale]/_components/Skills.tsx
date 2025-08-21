@@ -14,7 +14,7 @@ export const Skills = async () => {
     const tBack = await getScopedI18n('Skills.BackEnd')
     const tDB = await getScopedI18n('Skills.BDD')
     const tDeploy = await getScopedI18n('Skills.Deploiement')
-    const tManage = await getScopedI18n('Skills.GestionDeProjet') as any
+    const tManage = await getScopedI18n('Skills.GestionDeProjet') 
     return (
     <Section className="flex flex-col items-start gap-4">
       <Badge className="rounded-[5px]" variant={"outline"}>{scopedT('badge')}</Badge>
