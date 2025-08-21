@@ -1,7 +1,6 @@
 "use client"
 
-import { Button, buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import { useChangeLocale, useCurrentLocale } from "@/locales/client";
 
 type LocaleSelectProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
@@ -19,7 +18,11 @@ export const LocaleSelect = ({ className, ...props }: LocaleSelectProps) => {
             aria-label={isFrench ? "Switch to English" : "Passer en Français"}
             {...props}
             >
-            <span className="text-lg">{isFrench ? "🇬🇧" : "🇫🇷"}</span>
+            <img
+                src={isFrench ? "/fr.svg" : "/en.svg"}
+                alt={isFrench ? "🇬🇧" : "🇫🇷"}
+                className="h-5 w-5"
+            />
         </Button>
     );
 }
