@@ -20,7 +20,9 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  const { locale } = await params;
+  
+  const resolvedParams = await params;
+  const { locale } = resolvedParams;
   return (
     <html lang="fr" className="h-full">
       <body className={cn(GeistSans.variable, GeistMono.variable, AnekTelugu.variable, "font-sans h-full bg-background text-foreground")}><Providers  locale={locale}>{children}</Providers ></body>
