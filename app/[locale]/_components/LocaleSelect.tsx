@@ -19,7 +19,7 @@ export const LocaleSelect = ({ className, ...props }: LocaleSelectProps) => {
             {...props}
             >
             <img
-                src={isFrench ? "/fr.svg" : "/en.svg"}
+                src={isFrench ? "/en.svg" : "/fr.svg"}
                 alt={isFrench ? "🇬🇧" : "🇫🇷"}
                 className="h-5 w-5"
             />
