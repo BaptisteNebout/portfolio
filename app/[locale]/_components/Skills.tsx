@@ -39,7 +39,7 @@ export const Skills = async () => {
               <p className="text-muted-foreground text-sm">{tDB('description1')}<Code>MySQL</Code> {tDB('and')} <Code>MongoDB</Code>{tDB('description2')}</p>
             </div>
         </div>
-        <div className="flex max-md:flex-col gap-20 md:m-auto ">
+        <div className="flex max-md:flex-col gap-10 md:m-auto ">
           <div className="flex flex-col gap-2 flex-1">
               <DockerIcon size={42} />
               <h3 className="text-2xl font-semibold tracking-tight">{tDeploy('title')}</h3>

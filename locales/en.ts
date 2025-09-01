@@ -9,13 +9,19 @@ export default {
       title: 'Professional Experience',
       SLD: {
         title: 'Studio Little Dreams',
-        role: 'Project Manager & Frontend Developer',
-        description: 'Within a small remote team of four, I contributed to diverse web and CRM initiatives — from bug fixing to complete website redesigns. I notably co-developed a CRM almost independently, taking charge of planning, task tracking (Wrike), and coordination through daily and weekly meetings. This experience significantly strengthened my sense of ownership and initiative.'
+        role: 'Project Manager and Frontend Developer',
+        description1: 'Small structure of 4 employees, 100% remote organization',
+        description2: 'Coordination through daily & weekly meetings + task tracking with Wrike',
+        description3: 'Main project: co-development of a complete CRM and website redesigns',
+        description4: 'Contribution: autonomous development, planning management, bug fixes and maintenance',
       },
       Macompta: {
         title: 'MaCompta.fr',
         role: 'Backend Developer',
-        description: 'In a 40-person company, I joined a 6-member Agile team following rigorous workflows (daily stand-ups, weekly reviews, milestones). The team included frontend developers, a tester, a Scrum Master, and two backend developers. I worked closely with my mentor on a strategic application redesign, collaborating cross-functionally with other business units to ensure alignment and success.'
+        description1: 'Company of 40 employees within an Agile team of 6 people (scrum master, tester, frontend & backend developers)',
+        description2: 'Collaboration using Agile methodology (daily, weekly, milestones) with business units',
+        description3: 'Main project: strategic application redesign',
+        description4: 'Contribution: backend development and joint work with the backend project manager',
       }
     },
     ProjetPerso: {

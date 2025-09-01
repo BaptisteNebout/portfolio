@@ -22,8 +22,8 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   return (
-    <html lang="fr" className="h-full">
-      <body className={cn(GeistSans.variable, GeistMono.variable, AnekTelugu.variable, "font-sans h-full bg-background text-foreground")}><Providers  locale={locale}>{children}</Providers ></body>
+    <html lang="fr" className="h-full" suppressHydrationWarning>
+      <body className={cn(GeistSans.variable, GeistMono.variable, AnekTelugu.variable, "font-sans h-full bg-background light:bg-background text-foreground")}><Providers  locale={locale}>{children}</Providers ></body>
     </html>
   );
 }
