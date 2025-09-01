@@ -25,7 +25,7 @@ export const Status = async () => {
 
             <Card className="col-span-1 p-4 flex-1 flex-col border-secondary">
                 <p className="text-muted-foreground text-lg">{tProj('title')}</p>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-10">
                     {SIDE_PROJECTS.map((project, index) => (
                         <SideProject key={index} {...project} />
                     ))}
@@ -48,20 +48,26 @@ export const Status = async () => {
 
 const Works: WorkProps[] = [
     {
-        image: "https://studio-little-dreams.com/lovable-uploads/100b7eda-880a-49b3-9586-a0c7534024f8.png",
-        titleKey: 'SLD.title',
-        roleKey: 'SLD.role',
-        descriptionKey: 'SLD.description',
-        date: "2020-2024",
-        url: "https://studio-little-dreams.com/"
-    },
-    {
         image: "https://www.macompta.fr/build/assets/Header/images/logo-macompta.b105b4138f87b215c2f19396e5a4314c.png",
         titleKey: "Macompta.title",
         roleKey: "Macompta.role",
-        descriptionKey: "Macompta.description",
+        description1: "Macompta.description1",
+        description2: "Macompta.description2",
+        description3: "Macompta.description3",
+        description4: "Macompta.description4",
         date: "2024",
         url: "https://www.macompta.fr/"
+    },
+    {
+        image: "https://studio-little-dreams.com/lovable-uploads/100b7eda-880a-49b3-9586-a0c7534024f8.png",
+        titleKey: 'SLD.title',
+        roleKey: 'SLD.role',
+        description1: 'SLD.description1',
+        description2: 'SLD.description2',
+        description3: 'SLD.description3',
+        description4: 'SLD.description4',
+        date: "2020-2024",
+        url: "https://studio-little-dreams.com/"
     }
 ]
 

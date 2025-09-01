@@ -10,12 +10,18 @@ export default {
       SLD: {
         title: 'Studio Little Dreams',
         role: 'Chef de projet et Développeur front',
-        description: 'Dans une structure de quatre employés en télétravail, j\'ai contribué à divers projets web et CRM, de la correction de bugs à la refonte complète de sites. J\'ai notamment co-développé un CRM en autonomie, en gérant la planification, le suivi des tâches (Wrike) et la coordination via daily et weekly meetings, renforçant ainsi mon sens de l\'initiative.',
+        description1: 'Petite structure de 4 employés, organisation 100% remote',
+        description2: 'Coordination via daily & weekly meetings + suivi des tâches avec Wrike',
+        description3: 'Projet principal : co-développement d\'un CRM complet et refonte de sites web',
+        description4: 'Contribution : développement en autonomie, gestion de la planification, corrections et maintenance',
       },
       Macompta:{
         title: 'MaCompta.fr',
         role: 'Développeur back',
-        description: 'Au sein d\'une entreprise de 40 collaborateurs, j\'ai intégré une équipe Agile de 6 personnes appliquant des processus rigoureux (daily, weekly, jalons), des développeurs front, un testeur, une scrum master et deux développeur back. J\'ai co-travaillé avec mon maître d\'apprentissage sur un projet stratégique de refonte applicative, en étroite collaboration avec les autres business units.',
+        description1: 'Entreprise de 40 collaborateurs au sein d\'une équipe Agile de 6 personnes (scrum master, testeur, dev front & back)',
+        description2: 'Collaboration en méthode Agile (daily, weekly, jalons) avec les business units',
+        description3: 'Projet principal : refonte applicative stratégique',
+        description4: 'Contribution : développement back-end et travail conjoint avec le chef de projet backend',
       }
     },
     ProjetPerso: {
