@@ -6,6 +6,7 @@ import { Section } from "./Section";
 import { LinkedinIcon } from "./icons/LinkedinIcon";
 import { GmailIcon } from "./icons/GmailIcon";
 import { LocaleSelect } from "./LocaleSelect";
+import { ThemesToggle } from "./ThemesToggle";
 
 export const Header = () => {
     return (
@@ -24,6 +25,7 @@ export const Header = () => {
                         <GmailIcon size={12} className="text-foreground"/>
                     </Link>
                     <LocaleSelect />
+                    <ThemesToggle />
                 </ul>
             </Section>
         </header>
