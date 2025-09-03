@@ -4,10 +4,17 @@ import { useTheme } from "next-themes";
 import { Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const isDark = theme === "dark";
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = resolvedTheme === "dark";
 
   return (
     <button
@@ -18,12 +25,18 @@ export function ThemeToggle() {
       )}
       aria-label="Toggle theme"
     >
-      {isDark ? (
-        <Sun size={12} className="text-foreground" />
+      {mounted ? (
+        isDark ? (
+          <Sun size={12} className="text-foreground" />
+        ) : (
+          <Moon size={12} className="text-foreground" />
+        )
       ) : (
-        <Moon size={12} className="text-foreground" />
+        // Optionnel : afficher rien ou une icône neutre pendant le SSR
+        <span className="sr-only">Loading theme</span>
       )}
     </button>
   );
 }
 export const ThemesToggle = ThemeToggle;
+// ...existing code...
