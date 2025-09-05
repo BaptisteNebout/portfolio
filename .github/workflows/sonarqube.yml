@@ -1,29 +1,47 @@
-name: Build and Analyze
+name: CI & SonarCloud
 
 on:
   push:
     branches:
-      - develop-SonarQ  # ou main
+      - main
+      - develop-SonarQ
 
 jobs:
-  build:
-    name: SonarCloud Scan
+  # 🧪 Analyse SonarCloud sur develop-SonarQ
+  sonar-dev:
+    name: SonarCloud Analysis (develop-SonarQ)
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop-SonarQ'
 
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # nécessaire pour SonarCloud
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      - run: npm install
-      - run: npm run build # build Next.js pour vérifier que ton projet compile
-
+          fetch-depth: 0
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+  # 🚀 Build + Analyse SonarCloud en prod sur main
+  prod:
+    name: Build & SonarCloud (main)
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js app
+        run: npm run build
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
