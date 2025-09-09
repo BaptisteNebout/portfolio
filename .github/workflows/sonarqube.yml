@@ -1,45 +1,47 @@
-name: SonarCloud Analysis
+name: CI & SonarCloud
 
 on:
   push:
     branches:
+      - main
       - develop-SonarQ
-      - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
-  sonarcloud:
-    name: SonarCloud
+  # 🧪 Analyse SonarCloud sur develop-SonarQ
+  sonar-dev:
+    name: SonarCloud Analysis (develop-SonarQ)
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop-SonarQ'
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+  # 🚀 Build + Analyse SonarCloud en prod sur main
+  prod:
+    name: Build & SonarCloud (main)
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
       - name: Install dependencies
         run: npm install
+
+      - name: Build Next.js app
+        run: npm run build
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: https://sonarcloud.io
-
-      - name: Debug report file
-        run: cat .scannerwork/report-task.txt
-
-      - name: Check Quality Gate
-        uses: SonarSource/sonarqube-quality-gate-action@master
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        with:
-          scanMetadataReportFile: .scannerwork/report-task.txt
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
