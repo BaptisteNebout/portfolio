@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # nécessaire pour une analyse correcte
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -27,10 +27,6 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      # (Optionnel si tu ajoutes des tests plus tard)
-      # - name: Run tests with coverage
-      #   run: npm run test -- --coverage
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v5
@@ -42,3 +38,5 @@ jobs:
         uses: SonarSource/sonarqube-quality-gate-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          scanMetadataReportFile: .scannerwork/report-task.txt
