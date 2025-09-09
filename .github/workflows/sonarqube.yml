@@ -34,6 +34,9 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://sonarcloud.io
 
+      - name: Debug report file
+        run: cat .scannerwork/report-task.txt
+
       - name: Check Quality Gate
         uses: SonarSource/sonarqube-quality-gate-action@master
         env:
