@@ -27,9 +27,9 @@ export function ThemeToggle() {
     >
       {mounted ? (
         isDark ? (
-          <Sun size={12} className="text-foreground" />
+          <Sun data-testid="sun-icon" size={12} className="text-foreground" />
         ) : (
-          <Moon size={12} className="text-foreground" />
+          <Moon data-testid="moon-icon" size={12} className="text-foreground" />
         )
       ) : (
         // Optionnel : afficher rien ou une icône neutre pendant le SSR
@@ -39,4 +39,3 @@ export function ThemeToggle() {
   );
 }
 export const ThemesToggle = ThemeToggle;
-// ...existing code...
