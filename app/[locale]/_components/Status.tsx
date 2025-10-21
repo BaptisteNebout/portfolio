@@ -48,7 +48,7 @@ export const Status = async () => {
 
 const Works: WorkProps[] = [
     {
-        image: "https://www.macompta.fr/build/assets/Header/images/logo-macompta.b105b4138f87b215c2f19396e5a4314c.png",
+        image: "/Macompta.png",
         titleKey: "Macompta.title",
         roleKey: "Macompta.role",
         description1: "Macompta.description1",
@@ -59,7 +59,7 @@ const Works: WorkProps[] = [
         url: "https://www.macompta.fr/"
     },
     {
-        image: "https://studio-little-dreams.com/lovable-uploads/100b7eda-880a-49b3-9586-a0c7534024f8.png",
+        image: "/SLD.png",
         titleKey: 'SLD.title',
         roleKey: 'SLD.role',
         description1: 'SLD.description1',
