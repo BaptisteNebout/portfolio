@@ -1,20 +1,19 @@
 "use client";
-import { Badge } from "@/components/ui/badge";
 import { Contact } from "./Contact";
 import { Section } from "./Section";
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@radix-ui/react-label";
+import { Badge } from "@/components/ui/badge";
+import { useScopedI18n } from '../../../locales/client';
 
 export const Contacts = () => {
+  const scopedT = useScopedI18n('Contact');
+
   return (
     <Section className="flex flex-col items-start gap-4">
-        <Badge variant="outline">Me contacter</Badge>
-        <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">Je serais ravi d'échanger avec vous.</h2>
+        <Badge variant="outline">{scopedT('badge')}</Badge>
+        <h2 className="pb-2 text-3xl font-semibold tracking-tight first:mt-0">{scopedT('title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
             <Contact 
-                name="Baptiste Nebout" 
+                nameKey='linkedin' 
                 description="Linkedin" 
                 url="https://www.linkedin.com/in/bnebout" 
                 image="/PhotoProfil.jpg" 
@@ -23,7 +22,7 @@ export const Contacts = () => {
                 toCopy="https://www.linkedin.com/in/bnebout"
             />
             <Contact 
-                name="Téléphone portable" 
+                nameKey='phone'
                 description="07 83 53 66 88" 
                 url="/" 
                 image="/PhotoProfil.jpg" 
@@ -32,7 +31,7 @@ export const Contacts = () => {
                 toCopy="07 83 53 66 88"
             />
             <Contact 
-                name="Email" 
+                nameKey='mail'
                 description="baptiste16300@gmail.com" 
                 url="" 
                 image="/PhotoProfil.jpg" 
